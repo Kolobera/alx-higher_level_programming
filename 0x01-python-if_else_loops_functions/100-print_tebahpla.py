@@ -5,4 +5,3 @@ for i in reversed(range(97, 123)):
     else:
         to_p = chr(i)
     print("{:s}".format(to_p), end="")
-
