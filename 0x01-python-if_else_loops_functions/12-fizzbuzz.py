@@ -10,4 +10,4 @@ def fizzbuzz():
             to_p = "Buzz"
         else:
             to_p = str(i)
-        print("{:s}".format(to_p), end = " ")
+        print("{:s}".format(to_p), end=" ")
