@@ -1,3 +1,4 @@
+#!/usr/bin/python3
 def uppercase(str):
     l=""
     for c in str:
