@@ -5,7 +5,7 @@ str = f"Last digit of {number} is "
 if number > 0:
     last_d = number % 10
 else:
-    last_d = 10 - number % 10
+    last_d = number % 10 - 10
 str += f"{last_d} "
 if last_d > 5:
     str += "and is greater than 5"
