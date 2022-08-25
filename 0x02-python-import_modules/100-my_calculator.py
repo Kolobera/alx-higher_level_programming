@@ -1,12 +1,12 @@
 #!/usr/bin/python3
-from calculator_1.py import add, sub, mul, div
+from calculator_1 import add, sub, mul, div
 from sys import argv, exit
 if __name__ == "__main__":
     op_l = ["+", "-", "*", "/"]
-    op = argv[3]
+    op = argv[2]
     if op in op_l:
         a = int(argv[1])
-        b = int(argv[5])
+        b = int(argv[3])
         if op == "+":
             to_p = "{} + {} = {}".format(a, b, add(a, b))
         elif op == "-":
