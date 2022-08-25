@@ -15,7 +15,7 @@ if __name__ == "__main__":
         elif op == "-":
             to_p = "{} - {} = {}".format(a, b, sub(a, b))
         elif op == "*":
-            to_p = "{} * {] = {}".format(a, b, mul(a, b))
+            to_p = "{} * {} = {}".format(a, b, mul(a, b))
         else:
             to_p = "{} / {} = {}".format(a, b, div(a, b))
         print("{}".format(to_p))
