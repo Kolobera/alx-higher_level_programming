@@ -11,4 +11,4 @@ if __name__ == "__main__":
         to_p += " arguments:"
     print("{:s}".format(to_p))
     for i in range(1, le + 1):
-        print("{:s}".format(argv[i]))
+        print("{:d}: {:s}".format(i, argv[i]))
