@@ -6,6 +6,7 @@ class Square:
     """A Square class with"""
     def __init__(self, size=0):
         self.__size = size
+        self.__poition = position
 
     def area(self):
         return self.__size ** 2
