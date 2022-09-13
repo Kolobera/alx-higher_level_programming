@@ -51,7 +51,7 @@ class Square:
 
     def __str__(self):
         if self.__size == 0:
-            return "\n"
+            return ""
         else:
             liste = []
             liste.append("\n" * self.__position[1])
