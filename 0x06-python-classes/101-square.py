@@ -50,4 +50,14 @@ class Square:
                 print("#" * self.__size)
 
     def __str__(self):
-        my_print()
+        if self.__size == 0:
+            return "\n"
+        else:
+            liste = []
+            liste.append("\n" * self.__position[1])
+            for i in range(self.__size):
+                liste.append(" " * self.__position[0])
+                liste.append("#" * self.__size)
+                if i < self.__size - 1:
+                    liste.append('\n')
+                    return "".join(liste)
