@@ -1,4 +1,6 @@
 #!/usr/bin/python3
+"""The print square module"""
+
 
 def print_square(size):
     """Print a square of size : size"""

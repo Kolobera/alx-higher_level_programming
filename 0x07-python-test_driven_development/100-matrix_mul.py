@@ -44,8 +44,7 @@ def matrix_mul(m_a, m_b):
     for row_b in m_b:
         for i in row_b:
             if type(i) not in [int, float]:
-                raise TypeError("m_b should contain only integers or floats"
-
+                raise TypeError("m_b should contain only integers or floats")
     row_a_len = 0
     for row_a in m_a:
         if len(row_a) is not row_a_len and row_a_len is not 0:
@@ -56,9 +55,7 @@ def matrix_mul(m_a, m_b):
         if len(row_b) is not row_b_len and row_b_len is not 0:
             raise TypeError("each row of m_b must be of the same size")
         row_b_len = len(row_b)
-
     if row_a_len is not len(m_b):
         raise ValueError("m_a and m_b can't be multiplied")
-
     return [[sum(a * b for a, b in zip(row_a, col_b))
              for col_b in zip(*m_b)] for row_a in m_a]
