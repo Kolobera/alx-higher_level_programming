@@ -5,4 +5,3 @@
 def is_same_class(obj, a_class):
     """Says if obj is instance of class"""
     return isinstance(obj, a_class)
-    
