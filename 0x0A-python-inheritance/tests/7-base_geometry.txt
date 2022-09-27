@@ -1,0 +1,37 @@
+The ``7-base_geometry`` module
+=============================
+
+Using ``BaseGeometry``
+---------------------
+
+Import class from module
+        >>> BaseGeometry = __import__("7-base_geometry").BaseGeometry
+
+Checking regular values
+        >>> mytest = BaseGeometry()
+        >>> mytest.integer_validator("my_int", 12)
+
+Checking other than ints
+        >>> mytest.integer_validator("name", "John")
+        Traceback (most recent call last):
+            ...
+        TypeError: name must be an integer
+
+Checking value = 0
+        >>> mytest.integer_validator("ksl", 0)
+        Traceback (most recent call last):
+            ...
+        ValueError: ksl must be greater than 0
+
+Checking value < 0
+        >>> mytest.integer_validator("ksl", -10)
+        Traceback (most recent call last):
+            ...
+        ValueError: ksl must be greater than 0
+
+Checking one argument
+        >>> mytest.integer_validator("mls")
+        Traceback (most recent call last):
+            ...
+        TypeError: integer_validator() missing 1 required positional argument: 'value'
+
