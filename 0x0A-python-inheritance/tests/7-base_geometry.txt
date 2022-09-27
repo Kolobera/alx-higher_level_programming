@@ -7,6 +7,12 @@ Using ``BaseGeometry``
 Import class from module
         >>> BaseGeometry = __import__("7-base_geometry").BaseGeometry
 
+Checking create mytest with parameters
+		>>> mytest = BaseGeometry(7, 9)
+		Traceback (most recent call last):
+			...
+		TypeError: __init__() takes 1 positional argument but 3 were given
+
 Checking regular values
         >>> mytest = BaseGeometry()
         >>> mytest.integer_validator("my_int", 12)
@@ -35,3 +41,8 @@ Checking one argument
             ...
         TypeError: integer_validator() missing 1 required positional argument: 'value'
 
+Checking area():
+		>>> mytest.area()
+		Traceback (most recent call last):
+			...
+		Exception: area() is not implemented
