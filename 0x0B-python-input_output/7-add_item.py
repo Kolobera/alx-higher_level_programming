@@ -28,7 +28,7 @@ with open ("add_item.json", "r", encoding="Utf-8") as file:
 
 for i in range(1, len(argv)):
         lp.append(argv[i])
-print(lp)
+
 with open("add_item.json", "w", encoding="Utf-8") as file:
     lpo = "[" + ", ".join(lp) + "]"
     file.write(json.dumps(lp))
