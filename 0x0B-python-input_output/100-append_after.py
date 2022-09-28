@@ -11,6 +11,6 @@ def append_after(filename="", search_string="", new_string=""):
         lp.append(data[i])
         if search_string in data[i]:
             lp.append(new_string)
-    
+
     with open(filename, "w") as file:
         file.write("".join(lp))
