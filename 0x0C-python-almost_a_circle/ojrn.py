@@ -2,8 +2,10 @@ from models.base import Base
 from models.rectangle import Rectangle
 from models.square import Square
 if __name__ == "__main__":
-
-    list_rectangles = [Rectangle(100, 40), Rectangle(90, 110, 30, 10), Rectangle(20, 25, 110, 80)]
-    list_squares = [Square(35), Square(15, 70, 50), Square(80, 30, 70)]
-
-    Base.draw(list_rectangles, list_squares)
+    r1 = Rectangle(10, 7, 2, 8)
+    dictionary = r1.to_dictionary()
+    json_dictionary = Base.to_json_string([dictionary])
+    print(dictionary)
+    print(type(dictionary))
+    print(json_dictionary)
+    print(type(json_dictionary))

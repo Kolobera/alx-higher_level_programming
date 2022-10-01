@@ -11,6 +11,7 @@ class Base:
     """The Base class"""
     __nb_objects = 0
     def __init__(self, id=None):
+        """initialize base class"""
         if id is not None:
             self.id = id
         else:
@@ -19,8 +20,9 @@ class Base:
 
     @staticmethod
     def to_json_string(list_dictionaries):
+        """return str representation of list_dict"""
         if list_dictionaries is None or len(list_dictionaries) <= 0:
-            return []
+            return "[]"
         return json.dumps(list_dictionaries)
 
     @classmethod
@@ -34,12 +36,14 @@ class Base:
 
     @staticmethod
     def from_json_string(json_string):
+        """return dict representation of json_string"""
         if json_string is None or not json_string:
             return []
         return json.loads(json_string)
 
     @classmethod
     def create(cls, **dictionary):
+        """create base instance from dictionnary"""
         if cls.__name__ == "Rectangle":
             new = cls(1, 1)
         elif cls.__name__ == "Square":
@@ -51,6 +55,7 @@ class Base:
 
     @classmethod
     def load_from_file(cls):
+        """create objects from json strings in file"""
         file_load = "{}.json".format(cls.__name__)
         if not path.isfile(file_load):
             return []
@@ -59,6 +64,7 @@ class Base:
 
     @classmethod
     def save_to_file_csv(cls, list_objs):
+        """writes the csv string representation of list_objs to a fil"""
         if not list_objs:
             list_objs = []
         with open("{}.csv".format(cls.__name__), "w", encoding="utf-8") as file:
@@ -72,6 +78,7 @@ class Base:
 
     @classmethod
     def load_from_file_csv(cls):
+        """create objects from csv strings in file"""
         list_objs = []
         with open("{}.csv".format(cls.__name__), 'r') as file:
             if cls.__name__ == "Rectangle":
@@ -86,7 +93,9 @@ class Base:
                 list_objs.append(cls.create(**row))
         return list_objs
 
+    @staticmethod
     def draw(list_rectangles, list_squares):
+        """draws rectangles and squares"""
         t.color("white")
         r=["gray", "blue","yellow", "purple", "red", "green", "brown"]
         t.goto(-300,300)
