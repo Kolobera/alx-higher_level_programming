@@ -122,3 +122,7 @@ class Base:
             t.forward(i.size)
             t.color('white')
             t.forward(10)
+        t.exitonclick()
+        
+        
+    

@@ -1,4 +1,5 @@
-from email import message
+#!/usr/bin/python3
+"""Module for Base unit test"""
 import unittest
 from models.base import Base
 from models.rectangle import Rectangle
@@ -167,3 +168,7 @@ arguments but 3 were given"
         dic = str([dic])
         dic = dic.replace("'", '"')
         self.assertEqual(dic, json_dic)
+
+
+if __name__ == "__main__":
+    unittest.main()
