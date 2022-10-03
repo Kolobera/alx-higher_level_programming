@@ -7,8 +7,8 @@ from models.rectangle import __doc__ as doc_check
 from models.square import Square
 import json
 import io
-
 from contextlib import redirect_stdout
+
 
 class TestRectangleMethods(unittest.TestCase):
     """Class to test the Rectangle Class"""
@@ -44,7 +44,7 @@ class TestRectangleMethods(unittest.TestCase):
         self.assertIsNotNone(Rectangle.update.__doc__)
         self.assertIs(hasattr(Rectangle, "to_dictionary"), True)
         self.assertIsNotNone(Rectangle.to_dictionary.__doc__)
-    
+
 # ---------------Tasks_2_&_3 Tests--------------------------------
     def test_class(self):
         """Test Rectangle class"""
@@ -604,6 +604,7 @@ positional argument: 'self'"
         Rect_test.update(12, 5, 67, 4, 8)
         dic = {'height': 67, 'x': 4, 'id': 12, 'width': 5, 'y': 8}
         self.assertEqual(Rect_test.to_dictionary(), dic)    
+
 
 if __name__ == "__main__":
     unittest.main()
