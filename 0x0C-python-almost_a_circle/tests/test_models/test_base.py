@@ -37,6 +37,8 @@ class TestBaseMethods(unittest.TestCase):
         self.assertIsNotNone(Base.save_to_file.__doc__)
         self.assertIs(hasattr(Base, "load_from_file_csv"), True)
         self.assertIsNotNone(Base.load_from_file.__doc__)
+        self.assertIs(hasattr(Base, "draw"), True)
+        self.assertIsNotNone(Base.draw.__doc__)
 
 #----------Task_1 Tests-------------------
     def testNbPriv(self):
