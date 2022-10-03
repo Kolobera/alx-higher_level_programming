@@ -200,7 +200,7 @@ square.Square'>")
             message = "{} must be an integer".format(attr)
             for invalid in self.invalid_types():
                 with self.assertRaises(TypeError) as excep:
-                    setattr(Square_test, attr, invalid_types)
+                    setattr(Square_test, attr, self.invalid_types)
                 self.assertEqual(str(excep.exception), message)
         message = "width must be an integer"
         for invalid in self.invalid_types():
