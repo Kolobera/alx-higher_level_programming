@@ -2,11 +2,12 @@
 """The Square module"""
 from models.rectangle import Rectangle
 
+
 class Square(Rectangle):
     """The Square class"""
     def __init__(self, size, x=0, y=0, id=None):
         """Initialize an object"""
-        super().__init__(size, size, x , y, id)
+        super().__init__(size, size, x, y, id)
 
     @property
     def size(self):
@@ -38,4 +39,3 @@ class Square(Rectangle):
         """Dictionnary of attributes"""
         attributes = ["id", "size", "x", "y"]
         return {key: getattr(self, key) for key in attributes}
-
