@@ -2,6 +2,7 @@
 """The Rectangle module"""
 from models.base import Base
 
+
 class Rectangle(Base):
     """The Recatangle class"""
     def __init__(self, width, height, x=0, y=0, id=None):
@@ -87,7 +88,7 @@ class Rectangle(Base):
             setattr(self, atrr, arg)
         for atrr, arg in kwargs.items():
             setattr(self, atrr, arg)
-    
+
     def to_dictionary(self):
         """return dictionnary of rectangle attributes"""
         atrributes = ["id", "width", "height", "x", "y"]

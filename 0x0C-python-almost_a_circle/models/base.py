@@ -102,7 +102,7 @@ class Base:
     def draw(list_rectangles, list_squares):
         """draws rectangles and squares"""
         t.color("white")
-        r=["gray", "blue", "yellow", "purple", "red", "green", "brown"]
+        r = ["gray", "blue", "yellow", "purple", "red", "green", "brown"]
         t.goto(-300, 300)
 
         def rec(col, lon, lar):
