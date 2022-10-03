@@ -8,6 +8,7 @@ from models.base import __doc__ as doc_check
 import json
 import os
 
+
 class TestBaseMethods(unittest.TestCase):
     """Class to test the Base Class"""
     def setUp(self):
@@ -40,15 +41,15 @@ class TestBaseMethods(unittest.TestCase):
         self.assertIs(hasattr(Base, "draw"), True)
         self.assertIsNotNone(Base.draw.__doc__)
 
-#----------Task_1 Tests-------------------
+# ----------Task_1 Tests-------------------
     def testNbPriv(self):
         """test if nb_objects is a private attribute"""
         self.assertTrue(hasattr(Base, "_Base__nb_objects"))
-    
+
     def test_nb_initialisation(self):
         """tests the initialisation of nb_objects"""
-        self.assertEqual(getattr(Base, "_Base__nb_objects"),0)
-    
+        self.assertEqual(getattr(Base, "_Base__nb_objects"), 0)
+
     def test_instanciation(self):
         """tests the regular instanciation of Base"""
         Base_t = Base()
@@ -62,7 +63,7 @@ class TestBaseMethods(unittest.TestCase):
             Base.__init__()
         message = "__init__() missing 1 required positional argument: 'self'"
         self.assertEqual(str(excep.exception), message)
-    
+
     def test_init_too_many_args(self):
         """test init with too many args"""
         with self.assertRaises(TypeError) as excep:
@@ -70,13 +71,13 @@ class TestBaseMethods(unittest.TestCase):
         message = "__init__() takes from 1 to 2 positional \
 arguments but 3 were given"
         self.assertEqual(str(excep.exception), message)
-    
+
     def test_id_count(self):
         "tests if the id is following"
         op = Base()
         po = Base()
         lm = Base(4)
-        lp= Base()
+        lp = Base()
         self.assertEqual(op.id, 1)
         self.assertEqual(po.id, 2)
         self.assertEqual(lm.id, 4)
@@ -110,7 +111,7 @@ arguments but 3 were given"
         Base_t = Base(id=num)
         self.assertEqual(Base_t.id, num)
 
-#--------------------------Task_15 Tests-----------------
+# --------------------------Task_15 Tests-----------------
     def test_to_json_string_isattr(self):
         """test the to_json_string method"""
         with self.assertRaises(TypeError) as excep:

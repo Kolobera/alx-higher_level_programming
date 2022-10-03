@@ -208,9 +208,7 @@ square.Square'>")
                 setattr(Square_test, "width", invalid)
             self.assertEqual(str(excep.exception), message)
 
-
 # ---------------Task_4--------------------------------
-
     def test_area_only_size(self):
         """Test area() with height and witdth only"""
         Square_test = Square(9)
@@ -544,6 +542,7 @@ positional argument: 'self'"
         Square_test1.update(5, 7, 9, 56)
         dic = {'x': 9, 'y': 56, 'size': 7, 'id': 5}
         self.assertEqual(Square_test1.to_dictionary(), dic)
+
 
 if __name__ == "__main__":
     unittest.main()
