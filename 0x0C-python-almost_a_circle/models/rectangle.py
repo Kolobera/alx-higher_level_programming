@@ -75,11 +75,13 @@ class Rectangle(Base):
 
     def display(self):
         """Prints a drawing of rectangle with "#" symbol"""
-        print("\n" * self.__y + "\n".join((" " * self.__x + "#" * self.__width) for x in range(self.__height)))
+        print("\n" * self.__y + "\n".join((" " * self.__x + "#" * self.__width)
+        for x in range(self.__height)))
 
     def __str__(self):
         """Representation of rectangle"""
-        return f"[Rectangle] ({self.id}) {self.__x}/{self.__y} - {self.__width}/{self.__height}"
+        return f"[Rectangle] ({self.id}) {self.__x}/{self.__y} - {self.__width}\
+/{self.__height}"
 
     def update(self, *args, **kwargs):
         """Updates attributes of a rectangle object"""
