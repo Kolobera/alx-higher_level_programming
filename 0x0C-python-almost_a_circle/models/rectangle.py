@@ -76,7 +76,7 @@ class Rectangle(Base):
     def display(self):
         """Prints a drawing of rectangle with "#" symbol"""
         print("\n" * self.__y + "\n".join((" " * self.__x + "#" * self.__width)
-        for x in range(self.__height)))
+                for x in range(self.__height)))
 
     def __str__(self):
         """Representation of rectangle"""
