@@ -33,7 +33,7 @@ class Base:
             list_objs = []
         list_objs = [obj.to_dictionary() for obj in list_objs]
         with open("{}.json".format(cls.__name__), "w", encoding="utf-8")\
-        as file:
+                as file:
             file.write(cls.to_json_string(list_objs))
 
     @staticmethod
@@ -62,9 +62,9 @@ class Base:
         if not path.isfile(file_load):
             return []
         with open(file_load, "r", encoding="utf-8")\
-            as file:
+                as file:
             return[cls.create(**dic) for dic in\
-                cls.from_json_string(file.read())]
+                    cls.from_json_string(file.read())]
 
     @classmethod
     def save_to_file_csv(cls, list_objs):
@@ -72,7 +72,7 @@ class Base:
         if not list_objs:
             list_objs = []
         with open("{}.csv".format(cls.__name__), "w", encoding="utf-8")\
-            as file:
+                as file:
             if cls.__name__ == "Rectangle":
                 fields = ['id', 'width', 'height', 'x', 'y']
             elif cls.__name__ == "Square":
@@ -104,6 +104,7 @@ class Base:
         t.color("white")
         r=["gray", "blue", "yellow", "purple", "red", "green", "brown"]
         t.goto(-300, 300)
+
         def rec(col, lon, lar):
             t.pendown()
             t.pensize(1)
