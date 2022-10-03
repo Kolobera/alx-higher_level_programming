@@ -603,7 +603,7 @@ positional argument: 'self'"
 
         Rect_test.update(12, 5, 67, 4, 8)
         dic = {'height': 67, 'x': 4, 'id': 12, 'width': 5, 'y': 8}
-        self.assertEqual(Rect_test.to_dictionary(), dic)    
+        self.assertEqual(Rect_test.to_dictionary(), dic)
 
 
 if __name__ == "__main__":
