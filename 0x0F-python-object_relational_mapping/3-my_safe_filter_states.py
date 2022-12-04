@@ -18,7 +18,7 @@ if __name__ == "__main__":
 
     cursor = connect_db.cursor()
     cursor.execute("SELECT * FROM states WHERE name = %s ORDER BY id",
-                (searched_name, ))
+                searched_name)
     return_list = cursor.fetchall()
     for row in return_list:
         print(row)
