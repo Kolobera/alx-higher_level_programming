@@ -1,8 +1,9 @@
 #!/usr/bin/python3
+"""Script that prints all states in
+    Db
+    """
 import MySQLdb
 from sys import argv
-"""First Db"""
-
 
 if __name__ == "__main__":
     username = argv[1]
