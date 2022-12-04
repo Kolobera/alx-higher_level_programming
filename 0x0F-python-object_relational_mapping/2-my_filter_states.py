@@ -8,7 +8,7 @@ if __name__ == "__main__":
     username = argv[1]
     password = argv[2]
     database_name = argv[3]
-    searched_name = sys.argv[4]
+    searched_name = argv[4]
 
     connect_db = MySQLdb.connect(host="localhost",
                                  port=3306,
