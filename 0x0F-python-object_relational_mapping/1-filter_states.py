@@ -1,7 +1,9 @@
 #!/usr/bin/python3
+"""Script that displays all states begining
+    with N"""
 import MySQLdb
 from sys import argv
-"""script that prints all state begining with N"""
+
 if __name__ == "__main__":
     username = argv[1]
     password = argv[2]
