@@ -23,7 +23,9 @@ if __name__ == "__main__":
                  WHERE s.name = %s\
                  ORDER BY c.id", (searched_name, ))
     return_list = cursor.fetchall()
+    lp = []
     for row in return_list:
-        print(row)
+        lp.append(row[0])
+    print(", ".join(lp))
     cursor.close()
     connect_db.close()
