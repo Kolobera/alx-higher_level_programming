@@ -1,20 +1,25 @@
 #!/usr/bin/python3
-"""
-script that lists all State objects from the database hbtn_0e_6_usa
-"""
+""" Delet state objects using sqlalchemy """
 
 if __name__ == '__main__':
-    import sys
+
+    from sys import argv
     from sqlalchemy import create_engine
-    from sqlalchemy.orm import sessionmaker
+    from sqlalchemy.orm.session import sessionmaker, Session
     from model_state import Base, State
 
-    engine = create_engine('mysql+mysqldb://{}:{}@localhost/{}'
-                           .format(sys.argv[1], sys.argv[2], sys.argv[3]))
+    username = argv[1]
+    password = argv[2]
+    db_name = argv[3]
+
+    engine = create_engine('mysql+mysqldb://{}:{}@localhost:3306/{}'
+                           .format(username, password, db_name))
+
     Session = sessionmaker(bind=engine)
     s = Session()
 
-    state = s.query(State).filter_by(id=2).first()
-    state.name = "New Mexico"
+    s.query(State).filter(State.name.like('%a%')).\
+        delete(synchronize_session=False)
+
     s.commit()
     s.close()
