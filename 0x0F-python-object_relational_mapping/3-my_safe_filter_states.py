@@ -17,8 +17,8 @@ if __name__ == "__main__":
                                  db=database_name)
 
     cursor = connect_db.cursor()
-    cursor.execute("SELECT * FROM states WHERE name = %s ORDER BY id",
-                searched_name)
+    cursor.execute("SELECT * FROM states WHERE BINARY name=%s\
+                   ORDER BY id ASC", (searched_name, ))
     return_list = cursor.fetchall()
     for row in return_list:
         print(row)
