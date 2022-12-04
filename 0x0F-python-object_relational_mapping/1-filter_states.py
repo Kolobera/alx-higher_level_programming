@@ -17,7 +17,7 @@ if __name__ == "__main__":
     cursor.execute("SELECT * FROM states ORDER BY id ASC")
     return_list = cursor.fetchall()
     for row in return_list:
-        if row.split() =="":
+        if row[1][0] == "N":
             print(row)
     cursor.close()
     connect_db.close()
