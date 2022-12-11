@@ -1,3 +1,3 @@
 #!/usr/bin/node
 
-class retangle{}
+module.exports = class retangle {};
