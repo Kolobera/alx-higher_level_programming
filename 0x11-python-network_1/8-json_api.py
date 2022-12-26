@@ -16,5 +16,5 @@ if __name__ == "__main__":
         else:
             lp = dict(r.json())
             print(f"[{lp['id']}] {lp['name']}")
-    except requests.exceptions.JSONDecodeError:
+    except:
         print("Not a valid JSON")
