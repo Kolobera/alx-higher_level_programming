@@ -20,4 +20,3 @@ if __name__ == '__main__':
             print(row.id)
     if j == 0:
         print("Not found")
-    
