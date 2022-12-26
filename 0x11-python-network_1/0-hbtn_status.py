@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-# Hbnb Status
+""" Alx Status """
 import urllib.request
 
 
