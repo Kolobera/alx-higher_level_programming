@@ -11,6 +11,7 @@ if __name__ == "__main__":
     i = 0
     for commit in commits:
         if i < 10:
-            print("{}: {}".format(commit.get("sha"),
-                  commit.get("commit").get("author").get("name")))
-            i += 1
+            if "SSH" in str(commit.get("commit").get("verification").get("signature")):
+                print("{}: {}".format(commit.get("sha"),
+                      commit.get("commit").get("author").get("name")))
+                i += 1
