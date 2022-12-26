@@ -5,7 +5,7 @@ from sys import argv
 
 
 if __name__ == "__main__":
-    re = f"https://api.github.com/repos/{argv[1]}/{argv[2]}/commits?q=&per_page=100"
+    re = f"https://api.github.com/repos/{argv[2]}/{argv[1]}/commits?q=&per_page=100"
     r = requests.get(re)
     commits = r.json()
     i = 0
